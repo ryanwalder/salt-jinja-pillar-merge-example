@@ -14,9 +14,3 @@ example:
     - shell: /bin/false
   pkg.installed:
     - pkgs: {{ example.pkgs|json }}
-
-{% for file in example.files %}
-file-{{ file }}:
-  file.managed:
-    - name: {{ file }}
-{% endfor %}
